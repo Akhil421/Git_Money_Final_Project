@@ -89,3 +89,62 @@ Music synchronize with running steps
 
 **Grunt at gym**
 - after finishing a rep plays a grunt noise and after a set play a victory sound
+
+### Pi DJ
+-How do we interact with the DJ softwares
+
+
+https://en.wikipedia.org/wiki/Advanced_Linux_Sound_Architecture
+https://en.wikipedia.org/wiki/PulseAudio
+http://blog.scphillips.com/posts/2013/01/sound-configuration-on-raspberry-pi-with-alsa/
+The "sound stack" can be visualized as follows, with programs in the upper layers calling elements in the lower layers:
+Applications (e.g. mp3 player, web video)
+Sound server (e.g. aRts, ESD, JACK, PulseAudio)
+Sound subsystem (described as kernel modules or drivers; e.g. OSS, ALSA)
+Operating system kernel (e.g. Linux, Unix)
+http://www.mixxx.org/wiki/doku.php/hardware_compatibility
+We are basically using the glove to tell mixxx what to do
+http://www.mixxx.org/wiki/doku.php/start#controller_mapping_documentation how to tell the mixxx
+
+
+
+
+https://en.wikipedia.org/wiki/SoX
+
+
+These are some python api’s that edit/stream music live?
+http://stackoverflow.com/questions/8501141/python-change-pitch-of-audio-file
+http://audiere.sourceforge.net/features.php
+http://www.pygame.org/docs/ref/mixer.html
+
+
+Ideas:
+Second, we should do clapping with the capacitative force sensor to make a drumbeat, shaking to make reverb
+We should also do like temperature: imagine this: we live demo with a curved metal rod. One end is submerged in a hot liquid, the other end is submerged in a cold liquid. We run the temperature sensor along the metal rod, and we should get a temperature gradient
+Like think magic trick style presentation for music
+Also, if we can get light colors to sync to the frequency of second song, we can use color sensing to change the frequency of the current song to match the second one. We could make songs harmonize
+
+
+10/27/16
+Goals for today: Download Mixxx on Pi, figure out how to play music on Pi, try to either interface with the software directly, or if you need a DJ controller, figure out how to send MIDI commands from Arduino into Mixxx. 
+Optimization: Ask Jordan about feasibility of Spotify integration- PianoBar: Pandora for Linux. Might also be able to edit online radio streams. 
+
+
+Find simplest possible MIDI controller
+
+
+Review of MIDI, Pi, and music. Why are we unique. 
+
+
+Mixxx takes from MP3, Itunes, etc. Can Mixxx take input from mouse (don’t have to write MIDI code and can just control Mixxx)
+
+
+Branch #2:
+Proof of concept: Circuit Playground plays Sandstrom and we can edit tempo using accelerometer.  Individual notes are hardcoded into 8-bit music. 
+-Edit 8 bit music. 
+Github: MIDI glove
+
+
+Branch #3: Draw on touchscreen and Processing to either edit 8-bit or output MIDI for Mixxx. 
+
+
